@@ -143,7 +143,7 @@ resource "aws_mq_broker" "amazon_mq_broker" {
   subnet_ids         = var.subnet_ids
 
   auto_minor_version_upgrade = var.auto_minor_version_upgrade
-  publicly_accessible        = false
+  publicly_accessible        = true
   #storage_type = "efs" / "ebs" # - (Optional) Storage type of the broker. For engine_type ActiveMQ, the valid values are efs and ebs, and the AWS-default is efs. For engine_type RabbitMQ, only ebs is supported. When using ebs, only the mq.m5 broker instance type family is supported.
 
   # NOTE: Omit logs block if both general and audit logs disabled:
