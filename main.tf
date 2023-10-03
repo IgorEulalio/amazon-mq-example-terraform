@@ -44,7 +44,7 @@ locals {
   mq_application_password        = local.mq_application_password_is_set ? var.mq_application_password : join("", random_password.mq_application_password.*.result)
 
   environments = {
-    "d1" = "DEV"
+    "d1" = "DEV" ## dev environment
     "i1" = "PRE"
     "p1" = "PRO"
   }
